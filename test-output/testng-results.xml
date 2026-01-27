@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-26T14:40:00 UTC" name="Suite" finished-at="2026-01-26T14:40:14 UTC" duration-ms="14168">
+    <groups>
+    </groups>
+    <test started-at="2026-01-26T14:40:00 UTC" name="loginTest" finished-at="2026-01-26T14:40:14 UTC" duration-ms="14168">
+      <class name="logintest.LoginTest">
+        <test-method is-config="true" signature="openPage()[pri:0, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:39:58 UTC" name="openPage" finished-at="2026-01-26T14:40:00 UTC" duration-ms="1860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method is-config="true" signature="loginPage()[pri:0, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:00 UTC" name="loginPage" finished-at="2026-01-26T14:40:03 UTC" duration-ms="3224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method signature="VerifyDefaultButtonState()[pri:1, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:03 UTC" name="VerifyDefaultButtonState" finished-at="2026-01-26T14:40:04 UTC" duration-ms="1220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDefaultButtonState -->
+        <test-method signature="greaterLengthPhoneNumberInputFieldValidation(java.lang.String)[pri:2, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:04 UTC" name="greaterLengthPhoneNumberInputFieldValidation" data-provider="moreThan10DigitNumbers" finished-at="2026-01-26T14:40:05 UTC" duration-ms="313" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[962164185612]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- greaterLengthPhoneNumberInputFieldValidation -->
+        <test-method signature="greaterLengthPhoneNumberInputFieldValidation(java.lang.String)[pri:2, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:05 UTC" name="greaterLengthPhoneNumberInputFieldValidation" data-provider="moreThan10DigitNumbers" finished-at="2026-01-26T14:40:05 UTC" duration-ms="305" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[962164185623]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- greaterLengthPhoneNumberInputFieldValidation -->
+        <test-method signature="greaterLengthPhoneNumberInputFieldValidation(java.lang.String)[pri:2, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:05 UTC" name="greaterLengthPhoneNumberInputFieldValidation" data-provider="moreThan10DigitNumbers" finished-at="2026-01-26T14:40:05 UTC" duration-ms="248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[962164185634]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- greaterLengthPhoneNumberInputFieldValidation -->
+        <test-method signature="lesserLengthPhoneNumberInputFieldValidation(java.lang.String)[pri:3, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:05 UTC" name="lesserLengthPhoneNumberInputFieldValidation" data-provider="lessThan10DigitNumbers" finished-at="2026-01-26T14:40:05 UTC" duration-ms="223" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lesserLengthPhoneNumberInputFieldValidation -->
+        <test-method signature="lesserLengthPhoneNumberInputFieldValidation(java.lang.String)[pri:3, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:05 UTC" name="lesserLengthPhoneNumberInputFieldValidation" data-provider="lessThan10DigitNumbers" finished-at="2026-01-26T14:40:06 UTC" duration-ms="250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[962164185]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lesserLengthPhoneNumberInputFieldValidation -->
+        <test-method signature="lesserLengthPhoneNumberInputFieldValidation(java.lang.String)[pri:3, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:06 UTC" name="lesserLengthPhoneNumberInputFieldValidation" data-provider="lessThan10DigitNumbers" finished-at="2026-01-26T14:40:06 UTC" duration-ms="235" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[96216]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lesserLengthPhoneNumberInputFieldValidation -->
+        <test-method signature="validPhoneNumberValidation(java.lang.String,java.lang.String)[pri:4, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:06 UTC" name="validPhoneNumberValidation" data-provider="validPhoneNumber" finished-at="2026-01-26T14:40:07 UTC" duration-ms="972" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3426963790]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OTP Verification]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validPhoneNumberValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:logintest.LoginTest@71d44a3]" started-at="2026-01-26T14:40:14 UTC" name="tearDown" finished-at="2026-01-26T14:40:14 UTC" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- logintest.LoginTest -->
+      <class name="searchTest.SearchTest">
+        <test-method is-config="true" signature="gotToHomePage()[pri:0, instance:searchTest.SearchTest@3e694b3f]" started-at="2026-01-26T14:40:07 UTC" name="gotToHomePage" finished-at="2026-01-26T14:40:08 UTC" duration-ms="733" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotToHomePage -->
+        <test-method signature="testProductSearch(java.lang.String,java.lang.String)[pri:0, instance:searchTest.SearchTest@3e694b3f]" started-at="2026-01-26T14:40:08 UTC" name="testProductSearch" data-provider="searchData" finished-at="2026-01-26T14:40:14 UTC" duration-ms="6379" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[boo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Book]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductSearch -->
+      </class> <!-- searchTest.SearchTest -->
+    </test> <!-- loginTest -->
+  </suite> <!-- Suite -->
+</testng-results>
