@@ -20,11 +20,11 @@ public class ProductSearchLocators {
 
 	public List<WebElement> suggestions;
 
-	@FindAll(@FindBy(xpath = "//div[@class='EG_gO']/div/a"))
+	@FindAll(@FindBy(xpath = "//button[text()='ADD']"))
 
 	public List<WebElement> results;
 
-	@FindBy(xpath = "//*[@id=\"left-carousel\"]/div[2]/div/div[2]/button")
+	@FindBy(xpath = "//button[text()='Add To Cart']")
 	public WebElement addToCartButton;
 
 	@FindBy(xpath = "//button[@aria-label='Cart']/span/span/span[2][@data-testid='cart-items-number']")

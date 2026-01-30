@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="searchTest.SearchTest">
+      <class name="categoryTest.CategoryAndSubCategoryTest">
         <methods>
-          <include name="testProductSearch" invocation-numbers="0"/>
+          <include name="testCatrgory"/>
         </methods>
-      </class> <!-- searchTest.SearchTest -->
+      </class> <!-- categoryTest.CategoryAndSubCategoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

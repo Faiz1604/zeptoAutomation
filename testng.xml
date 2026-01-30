@@ -4,7 +4,9 @@
 	<test thread-count="5" name="loginTest">
 		<classes>
 			<class name="logintest.LoginTest" />
-			<class name="searchTest.SearchTest"></class>
+			<class name="searchTest.SearchTest"></class> 
+			<class name="addressTest.AddressTest"></class>
+			<class name="categoryTest.CategoryAndSubCategoryTest"></class>
 		</classes>
 	</test> <!-- loginTest -->
 </suite> <!-- Suite -->

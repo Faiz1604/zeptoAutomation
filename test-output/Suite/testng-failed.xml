@@ -3,12 +3,18 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="loginTest(failed)">
     <classes>
-      <class name="searchTest.SearchTest">
+      <class name="addressTest.AddressTest">
         <methods>
-          <include name="testProductSearch" invocation-numbers="0"/>
           <include name="gotToHomePage"/>
+          <include name="testAddress"/>
         </methods>
-      </class> <!-- searchTest.SearchTest -->
+      </class> <!-- addressTest.AddressTest -->
+      <class name="categoryTest.CategoryAndSubCategoryTest">
+        <methods>
+          <include name="gotToHomePage"/>
+          <include name="testCatrgory"/>
+        </methods>
+      </class> <!-- categoryTest.CategoryAndSubCategoryTest -->
     </classes>
   </test> <!-- loginTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

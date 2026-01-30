@@ -2,10 +2,10 @@ package pages;
 
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import browser.Browser;
 import locators.ProductSearchLocators;
 
@@ -29,17 +29,13 @@ public class ProductSearchPage extends Browser {
 	 */
 	public static void sendKeyInInput(String keyword) {
 		try {
-
+			// Click search button
 			wait.until(ExpectedConditions.elementToBeClickable(productSearchLocators.searchButton)).click();
-			;
 			WebElement searchInput = wait.until(ExpectedConditions.visibilityOf(productSearchLocators.searchInput));
-
 			searchInput.clear();
 			searchInput.sendKeys(keyword);
-		}
-
-		catch (Exception e) {
-			System.out.println("Error while entering keyword in search input: " + e);
+		} catch (Exception e) {
+			System.out.println("Error while entering keyword in search input: " + e.getMessage());
 		}
 	}
 
@@ -50,7 +46,6 @@ public class ProductSearchPage extends Browser {
 	 * @param in      "suggestions" or "results"
 	 */
 	public static void searchProduct(String product, String in) {
-
 		try {
 			List<WebElement> list;
 
@@ -60,23 +55,19 @@ public class ProductSearchPage extends Browser {
 			} else {
 				list = wait.until(ExpectedConditions.visibilityOfAllElements(productSearchLocators.results));
 			}
-
 			// Iterate through the list and click matching product
-			
-			if(in.equalsIgnoreCase("results")) {
+
+			if (in.equalsIgnoreCase("result")) {
 				list.get(0).click();
 				return;
 			}
-			System.err.println(list.size());
 			for (WebElement element : list) {
-				
 				if (element.getText().contains(product)) {
-					System.out.println(element.getText());
+					System.out.println("Clicking on product: " + element.getText());
 					actions.moveToElement(element).click().perform();
 					break;
 				}
 			}
-
 		} catch (Exception e) {
 			System.out.println("Error while selecting product: " + e.getMessage());
 		}
@@ -89,7 +80,11 @@ public class ProductSearchPage extends Browser {
 		try {
 			WebElement addToCartButton = wait
 					.until(ExpectedConditions.elementToBeClickable(productSearchLocators.addToCartButton));
-			actions.moveToElement(addToCartButton).click().perform();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			
+			js.executeScript("arguments[0].scrollIntoView({block:'center'})", addToCartButton);
+			
+			System.out.println("clicked on add to cart");
 		} catch (Exception e) {
 			System.out.println("Error while clicking Add to Cart: " + e.getMessage());
 		}
@@ -103,24 +98,28 @@ public class ProductSearchPage extends Browser {
 	 * @return true if flow is successful, false otherwise
 	 */
 	public static boolean checkCartAndCompare(String keyword, String product) {
-
 		try {
 			sendKeyInInput(keyword);
 			searchProduct(product, "suggestions");
-			searchProduct(product, "results");
+			searchProduct(product, "result");
+			// If product not found in suggestions, check result
+			// Add product to cart
+//			clickOnAddToCart();
+			// Get previous count of items in cart
+			
 			int previousCount = 0;
-			clickOnAddToCart();
 
-			System.out.println("clicked on add to cart button");
+			// Get the count of items in cart after adding product
+			
+			Thread.sleep(2000);
 			WebElement numbersOfItemInCartAfter = wait
 					.until(ExpectedConditions.visibilityOf(productSearchLocators.itemNumbersText));
+			int afterCount = Integer.parseInt(numbersOfItemInCartAfter.getText());
 
-			int afterCount = Integer.parseInt(numbersOfItemInCartAfter.getText().replaceAll("\\D", ""));
-
+			// Return true if the cart count increased
 			return afterCount > previousCount;
-
 		} catch (Exception e) {
-			System.out.println(e);
+			System.out.println("Error in cart check and comparison: " + e.getMessage());
 			return false;
 		}
 	}
