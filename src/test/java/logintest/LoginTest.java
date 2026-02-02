@@ -1,36 +1,28 @@
 package logintest;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.AfterClass;
+
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.Assert;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;  // Use ExtentSparkReporter
+import browser.BaseTest;
 import browser.Browser;
+import browser.ScreenshotOnFailure;
 import pages.LoginPage;
 
-public class LoginTest {
+@Listeners(ScreenshotOnFailure.class)
 
-	 public static ExtentReports extent;      // ExtentReports object (public static)
-	    public static ExtentTest test;           // ExtentTest object (public static)
-	    public static ExtentSparkReporter sparkReporter;
- 
+public class LoginTest extends BaseTest {
+
     // Open browser before starting the suite
     @BeforeSuite
     public static void setUpSuite() {
-        // Initialize the Extent Spark Reporter
-        sparkReporter = new ExtentSparkReporter("/home/labuser/eclipse-workspace/Zepto/test-output/extendsReport");
-        extent = new ExtentReports();
-        extent.attachReporter(sparkReporter);
-
-        // Add system info (optional)
-        extent.setSystemInfo("Environment", "QA");
-        extent.setSystemInfo("User", "Tester");
-
+        // Initialize ExtentReports
+        initializeExtentReports("/home/labuser/eclipse-workspace/Zepto/test-output/extendsReport");
+        
         // Initialize the browser (launch the browser)
         Browser.openBrowser();
     }
@@ -133,7 +125,7 @@ public class LoginTest {
     @AfterSuite
     public static void tearDown() {
         // Close the browser and clean up resources
-    	Browser.closeBrowser();
-        extent.flush();  // Save and flush the report to disk
+        Browser.closeBrowser();
+        flushReports();  // Save and flush the report to disk
     }
 }

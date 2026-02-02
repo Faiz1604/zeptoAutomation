@@ -12,6 +12,12 @@ import java.util.Date;
 public class ScreenshotUtil {
 
     public static String captureScreenshot(WebDriver driver, String testName) {
+        // Create screenshots directory if it doesn't exist
+        File screenshotDir = new File("/home/labuser/eclipse-workspace/Zepto/test-output/screenshots");
+        if (!screenshotDir.exists()) {
+            screenshotDir.mkdirs();
+        }
+        
         // Create a timestamped filename for the screenshot
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String fileName = testName + "_" + timestamp + ".png";

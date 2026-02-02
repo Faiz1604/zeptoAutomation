@@ -3,16 +3,11 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="loginTest(failed)">
     <classes>
-      <class name="addressTest.AddressTest">
-        <methods>
-          <include name="gotToHomePage"/>
-          <include name="testAddress"/>
-        </methods>
-      </class> <!-- addressTest.AddressTest -->
       <class name="categoryTest.CategoryAndSubCategoryTest">
         <methods>
-          <include name="gotToHomePage"/>
-          <include name="testCatrgory"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testCategory" invocation-numbers="0"/>
         </methods>
       </class> <!-- categoryTest.CategoryAndSubCategoryTest -->
     </classes>

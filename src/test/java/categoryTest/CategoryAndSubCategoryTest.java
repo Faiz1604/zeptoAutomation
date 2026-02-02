@@ -4,13 +4,15 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
-
+import browser.ScreenshotOnFailure;
 import browser.Browser;
 import pages.CategoryAndSubCategory;
 import logintest.LoginTest;  // Import LoginTest to access the ExtentReports instance
+@Listeners(ScreenshotOnFailure.class)
 
 public class CategoryAndSubCategoryTest {
 
@@ -38,7 +40,7 @@ public class CategoryAndSubCategoryTest {
     @DataProvider(name = "categories")
     public static Object[][] categoryData() {
         // Test data for category functionality (category name)
-        Object[][] data = { { "all" } };
+        Object[][] data = { { "all"} };
         return data;
     }
 

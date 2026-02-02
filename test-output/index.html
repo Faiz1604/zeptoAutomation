@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods,   11 passed</span>
+                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="categoryTest.CategoryAndSubCategoryTest" class="method navigator-link" hash-for-method="testCategory(hello)">testCategory(hello)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,17 +122,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="logintest.LoginTest" class="method navigator-link" hash-for-method="greaterLengthPhoneNumberInputFieldValidation(962164185612)">greaterLengthPhoneNumberInputFieldValidation(962164185612)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="logintest.LoginTest" class="method navigator-link" hash-for-method="greaterLengthPhoneNumberInputFieldValidation(962164185623)">greaterLengthPhoneNumberInputFieldValidation(962164185623)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="logintest.LoginTest" class="method navigator-link" hash-for-method="greaterLengthPhoneNumberInputFieldValidation(962164185634)">greaterLengthPhoneNumberInputFieldValidation(962164185634)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="logintest.LoginTest" class="method navigator-link" hash-for-method="greaterLengthPhoneNumberInputFieldValidation(962164185612)">greaterLengthPhoneNumberInputFieldValidation(962164185612)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -143,11 +157,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="categoryTest.CategoryAndSubCategoryTest" class="method navigator-link" hash-for-method="testCategory(all)">testCategory(all)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="searchTest.SearchTest" class="method navigator-link" hash-for-method="testProductSearch(boo, Boost)">testProductSearch(boo, Boost)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -168,6 +177,43 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">categoryTest.CategoryAndSubCategoryTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCategory(hello)">
+                  </a> <!-- testCategory(hello) -->
+                  <span class="method-name">testCategory</span>
+                  <span class="parameters">(hello)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at categoryTest.CategoryAndSubCategoryTest.testCategory(CategoryAndSubCategoryTest.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">searchTest.SearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductSearch(boo, Boost)">
+                  </a> <!-- testProductSearch(boo, Boost) -->
+                  <span class="method-name">testProductSearch</span>
+                  <span class="parameters">(boo,Boost)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -179,14 +225,6 @@
                   <a name="VerifyDefaultButtonState">
                   </a> <!-- VerifyDefaultButtonState -->
                   <span class="method-name">VerifyDefaultButtonState</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="greaterLengthPhoneNumberInputFieldValidation(962164185612)">
-                  </a> <!-- greaterLengthPhoneNumberInputFieldValidation(962164185612) -->
-                  <span class="method-name">greaterLengthPhoneNumberInputFieldValidation</span>
-                  <span class="parameters">(962164185612)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -203,6 +241,14 @@
                   </a> <!-- greaterLengthPhoneNumberInputFieldValidation(962164185634) -->
                   <span class="method-name">greaterLengthPhoneNumberInputFieldValidation</span>
                   <span class="parameters">(962164185634)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="greaterLengthPhoneNumberInputFieldValidation(962164185612)">
+                  </a> <!-- greaterLengthPhoneNumberInputFieldValidation(962164185612) -->
+                  <span class="method-name">greaterLengthPhoneNumberInputFieldValidation</span>
+                  <span class="parameters">(962164185612)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -242,22 +288,6 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">searchTest.SearchTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testProductSearch(boo, Boost)">
-                  </a> <!-- testProductSearch(boo, Boost) -->
-                  <span class="method-name">testProductSearch</span>
-                  <span class="parameters">(boo,Boost)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">addressTest.AddressTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -267,22 +297,6 @@
                   </a> <!-- testAddress(tcs gitanjali park, kolkata) -->
                   <span class="method-name">testAddress</span>
                   <span class="parameters">(tcs gitanjali park,kolkata)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">categoryTest.CategoryAndSubCategoryTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testCategory(all)">
-                  </a> <!-- testCategory(all) -->
-                  <span class="method-name">testCategory</span>
-                  <span class="parameters">(all)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -346,15 +360,15 @@ data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testProductSearch')
 data.setCell(0, 2, 'searchTest.SearchTest')
-data.setCell(0, 3, 7900);
+data.setCell(0, 3, 7279);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testAddress')
 data.setCell(1, 2, 'addressTest.AddressTest')
-data.setCell(1, 3, 2914);
+data.setCell(1, 3, 3406);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testCategory')
 data.setCell(2, 2, 'categoryTest.CategoryAndSubCategoryTest')
-data.setCell(2, 3, 1588);
+data.setCell(2, 3, 1378);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'validPhoneNumberValidation')
 data.setCell(3, 2, 'logintest.LoginTest')
@@ -362,31 +376,31 @@ data.setCell(3, 3, 1066);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'VerifyDefaultButtonState')
 data.setCell(4, 2, 'logintest.LoginTest')
-data.setCell(4, 3, 743);
+data.setCell(4, 3, 776);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'greaterLengthPhoneNumberInputFieldValidation')
 data.setCell(5, 2, 'logintest.LoginTest')
-data.setCell(5, 3, 395);
+data.setCell(5, 3, 439);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'lesserLengthPhoneNumberInputFieldValidation')
+data.setCell(6, 1, 'greaterLengthPhoneNumberInputFieldValidation')
 data.setCell(6, 2, 'logintest.LoginTest')
-data.setCell(6, 3, 343);
+data.setCell(6, 3, 382);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'greaterLengthPhoneNumberInputFieldValidation')
 data.setCell(7, 2, 'logintest.LoginTest')
-data.setCell(7, 3, 334);
+data.setCell(7, 3, 357);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'greaterLengthPhoneNumberInputFieldValidation')
+data.setCell(8, 1, 'lesserLengthPhoneNumberInputFieldValidation')
 data.setCell(8, 2, 'logintest.LoginTest')
-data.setCell(8, 3, 327);
+data.setCell(8, 3, 330);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'lesserLengthPhoneNumberInputFieldValidation')
 data.setCell(9, 2, 'logintest.LoginTest')
-data.setCell(9, 3, 315);
+data.setCell(9, 3, 303);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'lesserLengthPhoneNumberInputFieldValidation')
 data.setCell(10, 2, 'logintest.LoginTest')
-data.setCell(10, 3, 304);
+data.setCell(10, 3, 298);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -424,91 +438,93 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">4136 ms</span>
+                <span class="method-start">2454 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">VerifyDefaultButtonState</span>
-                <span class="method-start">8140 ms</span>
+                <span class="method-start">6382 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">greaterLengthPhoneNumberInputFieldValidation(962164185612)</span>
-                <span class="method-start">8895 ms</span>
+                <span class="method-start">7169 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">greaterLengthPhoneNumberInputFieldValidation(962164185623)</span>
-                <span class="method-start">9293 ms</span>
+                <span class="method-start">7610 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">greaterLengthPhoneNumberInputFieldValidation(962164185634)</span>
-                <span class="method-start">9622 ms</span>
+                <span class="method-start">7970 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">lesserLengthPhoneNumberInputFieldValidation(9)</span>
-                <span class="method-start">9959 ms</span>
+                <span class="method-start">8361 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">lesserLengthPhoneNumberInputFieldValidation(962164185)</span>
-                <span class="method-start">10304 ms</span>
+                <span class="method-start">8662 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">lesserLengthPhoneNumberInputFieldValidation(96216)</span>
-                <span class="method-start">10610 ms</span>
+                <span class="method-start">8994 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validPhoneNumberValidation(3426963790, OTP Verification)</span>
-                <span class="method-start">10929 ms</span>
+                <span class="method-start">9302 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">searchTest.SearchTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">11999 ms</span>
+                <span class="method-start">10371 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testProductSearch(boo, Boost)</span>
-                <span class="method-start">13506 ms</span>
+                <span class="method-start">11878 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">21407 ms</span>
+                <span class="method-start">19158 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">addressTest.AddressTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">21842 ms</span>
+                <span class="method-start">19533 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testAddress(tcs gitanjali park, kolkata)</span>
-                <span class="method-start">23811 ms</span>
+                <span class="method-start">20761 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">26727 ms</span>
+                <span class="method-start">24169 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">categoryTest.CategoryAndSubCategoryTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">26785 ms</span>
+                <span class="method-start">24201 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">testCategory(all)</span>
-                <span class="method-start">28045 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCategory(hello)</span>
+                <span class="method-start">25520 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29634 ms</span>
+                <span class="method-start">27161 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">logintest.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29700 ms</span>
+                <span class="method-start">27228 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

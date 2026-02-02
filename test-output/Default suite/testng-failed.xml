@@ -5,7 +5,9 @@
     <classes>
       <class name="categoryTest.CategoryAndSubCategoryTest">
         <methods>
-          <include name="testCatrgory"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testCategory"/>
         </methods>
       </class> <!-- categoryTest.CategoryAndSubCategoryTest -->
     </classes>
